@@ -37,6 +37,9 @@ export class AuthService {
   async googleSignin() {
     const provider = new auth.GoogleAuthProvider();
     const credential = await this.afAuth.auth.signInWithPopup(provider);
+    if (!credential.user.isAnonymous) {
+      this.router.navigate(['/home'])
+    }
     return this.updateUserData(credential.user);
   }
 

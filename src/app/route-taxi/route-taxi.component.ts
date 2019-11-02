@@ -11,7 +11,6 @@ export class RouteTaxiComponent implements OnInit {
   constructor(private cookie: CookieService) { }
 
   ngOnInit() {
-    this.cookie.set('login', 'routeTaxi');
   }
 
 }

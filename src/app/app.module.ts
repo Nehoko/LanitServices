@@ -21,6 +21,7 @@ import {environment} from "../environments/environment.prod";
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from "@angular/material/card";
+import { SayRoomComponent } from './say-room/say-room.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import {MatCardModule} from "@angular/material/card";
     HomeComponent,
     RouteTaxiComponent,
     DriveFriendComponent,
+    SayRoomComponent,
   ],
   imports: [
     Material.MatToolbarModule,

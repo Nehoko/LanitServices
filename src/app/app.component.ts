@@ -18,6 +18,8 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    if (this.auth.user$) {
+      this.route.navigate(['/home']);
+    }
   }
 }

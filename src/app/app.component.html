@@ -10,121 +10,19 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="/home">Главная</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/addWorkAndVideo"></a>
-      </li>
-      <li class="nav-item">
-      <a class="nav-link" routerLink="/loadFile">Загрузить файл</a>
-    </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/loadFile">Загрузить файл</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/loadFile">Загрузить файл</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/loadFile">Загрузить файл</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/loadFile">Загрузить файл</a>
-      </li>
     </ul>
+    <div *ngIf="auth.user$ | async as user">
+      <button class="button" (click)="auth.signOut()">Sign out</button>
+    </div>
   </div>
 </nav>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Toolbar -->
-<div style="padding-top: 10px; padding-left: 1%" class="toolbar" role="banner">
-  <img
-    width="40"
-    alt="Angular Logo"
-    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MCIgaGVpZ2h0PSI4MCIgdmlld0JveD0iMCAwIDcwIDgwIj4KICA8bWV0YWRhdGE+PD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/PjwvbWV0YWRhdGE+CjxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6ICNmZmY7CiAgICAgICAgZmlsbC1ydWxlOiBldmVub2RkOwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8cGF0aCBpZD0i0LvQvtCz0L7RgtC40L8iIGNsYXNzPSJjbHMtMSIgZD0iTTY1LjM4MywxMDYuNzM2Vjk5Ljk4OWgtNi4yM3Y2Ljc0N0g1Ny4xVjkyLjRoMi4wNTR2NS44NDRoNi4yM1Y5Mi40SDY3LjQ0djE0LjMzNkg2NS4zODNtMTUuNDQzLDBoMi4wODdWOTIuNEg4MC40NjJsLTUuOCwxMS4zNTdINzQuNlY5Mi40SDcyLjU0NHYxNC4zMzZoMi40NDhsNS44LTExLjMyNGgwLjAzMnYxMS4zMjRNOTIuNzc3LDk0LjE0NWgzLjkzMVY5Mi40SDg2Ljc4OXYxLjc0NGgzLjkyOXYxMi41OTJoMi4wNThWOTQuMTQ1TTQ1LjkzNyw5Mi40M2gzLjI0NGw0LjY3NSwxNC4zMDdINTEuNjQzbC0xLjExNi0zLjY3OUg0NC41MzNsLTEuMTU4LDMuNjc5aC0yTDQ1LjkzNyw5Mi40M2gwWm0tMC45MSw4LjkxNGg0Ljk2MUw0Ny41LDkzLjEwNUg0Ny40NTZsLTIuNDI5LDguMjM4TTI5LjUxMyw5Mi40djMuMTkzYTQxLjA1OSw0MS4wNTksMCwwLDEtLjMsNi40MTFjLTAuMjQ1LDEuNTcyLS43MjQsMi40NzUtMS4zNiwyLjhhMy4yLDMuMiwwLDAsMS0uNjQxLjIzM0wyNy4wMiwxMDdhNS42NDIsNS42NDIsMCwwLDAsMi4xNjUtLjU2MmMxLjcyMi0xLjA1MywyLTMuMzQzLDIuMTQ3LTUuMjQyYTUwLjUsNTAuNSwwLDAsMCwuMjQ0LTUuNDg1Vjk0LjIzNmg0LjU2MnYxMi41aDIuMTQ4VjkyLjRIMjkuNTEzWk05Mi44MDYsNTkuNzM3QTE2LjQyNSwxNi40MjUsMCwwLDAsNzkuNTIyLDY2LjQ5LDQ4LjU4Miw0OC41ODIsMCwwLDAsNzguMyw2MS42MzVhMjAuNTE0LDIwLjUxNCwwLDAsMSwxNC41MTEtNS45OWw0LjEzNC0uMDI5LDAuMDA4LTQuMDYtNC4xNDIsMGEyNC42LDI0LjYsMCwwLDAtMTYuMDE5LDUuOTFjLTAuNTM5LTEuMzA5LTEuMTM3LTIuNTg2LTEuNzg0LTMuODM0YTI4LjY4NywyOC42ODcsMCwwLDEsMTcuOC02LjE2OGw0LjEsMCwwLjA0Mi00LjA4Ny00LjE0Mi0uMDA4YTMyLjc5LDMyLjc5LDAsMCwwLTE5Ljg1OSw2LjY2NmMtMC43MzEtMS4xNi0xLjUtMi4yOTMtMi4zMjQtMy4zODRhMzYuODk0LDM2Ljg5NCwwLDAsMSwyMi4xODMtNy4zNzRsNC4xNDIsMC4wMDdWMzUuMTkybC00LjE0Mi0uMDA4YTQwLjk4OCw0MC45ODgsMCwwLDAtMjQuNzg5LDguM3EtMS4zNzMtMS41MzctMi44NzQtMi45NTRhNDUuMDg0LDQ1LjA4NCwwLDAsMSwyNy42NjMtOS40NDJMOTYuOTQ4LDMxLjFWMjcuMDA4TDkyLjgwNiwyN0E0OS4xODYsNDkuMTg2LDAsMCwwLDYyLDM3Ljc5Miw0OS4xODUsNDkuMTg1LDAsMCwwLDMxLjE5MiwyN2wtNC4xNDIuMDA4VjMxLjFsNC4xNDItLjAwOGE0NS4wNzksNDUuMDc5LDAsMCwxLDI3LjY2Miw5LjQ0MnEtMS41LDEuNDE4LTIuODczLDIuOTUzYTQwLjk4OSw0MC45ODksMCwwLDAtMjQuNzg5LTguM2wtNC4xNDIuMDA4djQuMDkxbDQuMTQyLS4wMDdhMzYuODk0LDM2Ljg5NCwwLDAsMSwyMi4xODMsNy4zNzRjLTAuODIzLDEuMDkxLTEuNTkzLDIuMjI0LTIuMzI0LDMuMzg0YTMyLjc5MSwzMi43OTEsMCwwLDAtMTkuODYtNi42NjZsLTQuMTQyLjAwOCwwLjA0Miw0LjA4Nyw0LjEsMEEyOC42ODYsMjguNjg2LDAsMCwxLDQ5LDUzLjYyOWMtMC42NDYsMS4yNDktMS4yNDQsMi41MjYtMS43ODQsMy44MzRhMjQuNiwyNC42LDAsMCwwLTE2LjAyLTUuOTFsLTQuMTQyLDAsMC4wMDgsNC4wNiw0LjEzNCwwLjAyOUEyMC41MTIsMjAuNTEyLDAsMCwxLDQ1LjcsNjEuNjM2YTQ4LjYxOSw0OC42MTksMCwwLDAtMS4yMjcsNC44NTQsMTYuNDI2LDE2LjQyNiwwLDAsMC0xMy4yODQtNi43NTNMMjcsNTkuNzUydjQuMDgzbDQuMTkyLS4wMDZBMTIuMywxMi4zLDAsMCwxLDQzLjUsNzYuMWwwLjAxMyw4LjE2MSw0LjExMSwwLjAzLDAtMi4xOTMsMC4wMDctNmE0NC45NDIsNDQuOTQyLDAsMCwxLDEuMjI4LTEwLjQxMkEyMC4zLDIwLjMsMCwwLDEsNTEuNzIsNzYuMWwtMC4wNCw4LjE2MWg0LjE3MWwtMC4wMTUtNS4yODdMNTUuODQ4LDc2LjFhMzYuNjcyLDM2LjY3MiwwLDAsMSwxLjc3MS0xMS4yNzRBMjguNDUyLDI4LjQ1MiwwLDAsMSw1OS45MzUsNzYuMWwwLDguMTYxaDQuMTM0bDAtOC4xNjFBMjguNDU5LDI4LjQ1OSwwLDAsMSw2Ni4zNzksNjQuODMsMzYuNjY5LDM2LjY2OSwwLDAsMSw2OC4xNTEsNzYuMWwwLjAxMiwyLjg0MS0wLjAxNSw1LjMyaDQuMTcxTDcyLjI3OCw3Ni4xYTIwLjMsMjAuMywwLDAsMSwyLjg1OS0xMC40MTJBNDQuOTQ3LDQ0Ljk0NywwLDAsMSw3Ni4zNjYsNzYuMWwwLjAwOCw2LjAyNywwLDIuMTY0LDQuMTExLS4wM0w4MC40OTMsNzYuMUExMi4zLDEyLjMsMCwwLDEsOTIuODA2LDYzLjgyOUw5Nyw2My44MzRWNTkuNzUyWm0tMjMtN2EzMy4wMSwzMy4wMSwwLDAsMC0yLjg4MSwzLjIxNUE0MC45NzksNDAuOTc5LDAsMCwwLDY0LjYsNTIuMzIzLDM3LjA1NSwzNy4wNTUsMCwwLDEsNjcuNDc5LDQ5LjNRNjguNzE5LDUwLjk2Myw2OS44MDksNTIuNzM5Wk02Miw0My4ycTEuNSwxLjQsMi44NzUsMi45MjJRNjMuMzYzLDQ3LjUyLDYyLDQ5LjA2NHEtMS4zNjQtMS41NDEtMi44NzUtMi45NDJRNjAuNDk0LDQ0LjYsNjIsNDMuMlptLTUuNDgxLDYuMUEzNy4xMTMsMzcuMTEzLDAsMCwxLDU5LjQsNTIuMzIzYTQwLjc3MSw0MC43NzEsMCwwLDAtMi4zMjksMy42MzEsMzMuMDA4LDMzLjAwOCwwLDAsMC0yLjg4MS0zLjIxNVE1NS4yNzUsNTAuOTYzLDU2LjUxOCw0OS4zWk01My4yMzksNjUuMTUzYTI0LjU0OCwyNC41NDgsMCwwLDAtMi44ODUtNC40Nyw0NC42MzYsNDQuNjM2LDAsMCwxLDEuNzgtNC4xODQsMjguODE4LDI4LjgxOCwwLDAsMSwyLjg4LDMuNTc2QTQwLjU3Miw0MC41NzIsMCwwLDAsNTMuMjM5LDY1LjE1M1ptOC43Ni0uNDNhMzIuNTQ0LDMyLjU0NCwwLDAsMC0yLjMzLTQuOTI4QTM2LjcyNSwzNi43MjUsMCwwLDEsNjIsNTUuNzY1YTM2Ljg2NiwzNi44NjYsMCwwLDEsMi4zMjksNC4wMjlBMzIuNTA2LDMyLjUwNiwwLDAsMCw2Miw2NC43MjNabTguNzU5LDAuNDMxYTQwLjU1MSw0MC41NTEsMCwwLDAtMS43NzUtNS4wNzlBMjguOCwyOC44LDAsMCwxLDcxLjg2Myw1Ni41YTQ0LjcsNDQuNywwLDAsMSwxLjc4LDQuMTg1QTI0LjUyOCwyNC41MjgsMCwwLDAsNzAuNzU4LDY1LjE1M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNyAtMjcpIi8+Cjwvc3ZnPgo=
-"
-  />
-  <span>Lanit Service</span>
-  <div class="spacer"></div>
-    <div class="spacer"></div>
-  <div *ngIf="auth.user$ | async as user">
-    <button class="button" (click)="auth.signOut()">Sign out</button>
-  </div>
-  <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
-
-    <svg id="twitter-logo" height="24" data-name="Logo — FIXED" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
-      <defs>
-        <style>
-          .cls-1 {
-            fill: none;
-          }
-
-          .cls-2 {
-            fill: #ffffff;
-          }
-        </style>
-      </defs>
-      <rect class="cls-1" width="400" height="400" />
-      <path class="cls-2" d="M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23"
-      />
-    </svg>
-
-  </a>
-</div>
 <div  class="content" role="main">
 
   <div class="card-container">
     <div *ngIf="auth.user$ | async as user; else login">
-      <a class="card"  rel="noopener" routerLink="/dining">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
 
-        <span>Столовая</span>
-
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>    </a>
-
-      <a class="card"  rel="noopener" routerLink="/routeTaxi">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
-
-        <span>Маршрутки</span>
-
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-      </a>
-
-      <a class="card"  rel="noopener" routerLink="/driveFriend">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z"/></svg>
-
-        <span>Подвези друга</span>
-
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-    </a>
-    <a class="card"  rel="noopener" href="tg://resolve?domain=PingPongCalendarBot">
-    <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z"/></svg>
-
-    <span>Теннис</span>
-
-    <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-  </a>
-
-    <a class="card"  rel="noopener" routerLink="/tennis">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z"/></svg>
-
-      <span>Переговорки</span>
-
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-    </a>
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
     </div>
-  </div>
 </div>
 
 <ng-template #login>
