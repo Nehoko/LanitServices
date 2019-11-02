@@ -1,0 +1,25 @@
+[debug] [2019-11-02T15:22:33.869Z] ----------------------------------------------------------------------
+[debug] [2019-11-02T15:22:33.870Z] Command:       /home/idmikhailov/work/resources/node-v12.13.0-linux-x64/bin/node /home/idmikhailov/work/resources/node-v12.13.0-linux-x64/bin/firebase serve
+[debug] [2019-11-02T15:22:33.870Z] CLI Version:   7.6.2
+[debug] [2019-11-02T15:22:33.870Z] Platform:      linux
+[debug] [2019-11-02T15:22:33.870Z] Node Version:  v12.13.0
+[debug] [2019-11-02T15:22:33.871Z] Time:          Sat Nov 02 2019 18:22:33 GMT+0300 (GMT+03:00)
+[debug] [2019-11-02T15:22:33.871Z] ----------------------------------------------------------------------
+[debug] [2019-11-02T15:22:33.871Z] 
+[debug] [2019-11-02T15:22:33.874Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-11-02T15:22:33.874Z] > authorizing via signed-in user
+[debug] [2019-11-02T15:22:33.874Z] [iam] checking project gagaga-48b10 for permissions ["firebase.projects.get"]
+[debug] [2019-11-02T15:22:33.875Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/gagaga-48b10:testIamPermissions  
+
+[debug] [2019-11-02T15:22:34.876Z] <<< HTTP RESPONSE 200
+[debug] [2019-11-02T15:22:34.877Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/gagaga-48b10  
+ 
+[debug] [2019-11-02T15:22:35.071Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/idmikhailov/LanitServices'...
+[info] 
+[debug] [2019-11-02T15:22:35.075Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/gagaga-48b10/webApps/-/config  
+ 
+[debug] [2019-11-02T15:22:35.705Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: dist/lanitService
+[info] ✔  hosting: Local server: http://localhost:5000
