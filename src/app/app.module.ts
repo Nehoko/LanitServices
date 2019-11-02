@@ -15,7 +15,7 @@ import {AuthService} from "./services/auth.service";
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore'
-import {environment} from "../environments/environment";
+import {environment} from "../environments/environment.prod";
 
 
 
