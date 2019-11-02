@@ -1,0 +1,8 @@
+.example-card {
+  max-width: 80%;
+}
+
+.example-header-image {
+  background-image: url('http://mydrawing.net/wp-content/uploads/2015/12/047b725135e3598b36e389067c5f72e7.gif');
+  background-size: cover;
+}

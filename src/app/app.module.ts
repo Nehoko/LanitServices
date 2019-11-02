@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import * as Material from "@angular/material";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DiningComponent } from './dining/dining.component';
@@ -18,6 +19,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore'
 import {environment} from "../environments/environment.prod";
 
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -28,12 +31,34 @@ import {environment} from "../environments/environment.prod";
     DriveFriendComponent,
   ],
   imports: [
+    Material.MatToolbarModule,
+    Material.MatGridListModule,
+    Material.MatFormFieldModule,
+    Material.MatInputModule,
+    Material.MatRadioModule,
+    Material.MatSelectModule,
+    Material.MatDatepickerModule,
+    Material.MatNativeDateModule,
+    Material.MatButtonModule,
+    Material.MatSnackBarModule,
+    Material.MatTableModule,
+    Material.MatIconModule,
+    Material.MatPaginatorModule,
+    Material.MatSortModule,
+    Material.MatDialogModule,
+    Material.MatChipsModule,
+    Material.MatTooltipModule,
+    Material.MatNativeDateModule,
+    Material.MatProgressSpinnerModule,
+
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase,'gagaga'),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    BrowserAnimationsModule,
+    MatCardModule,
   ],
   providers: [
     CookieService,

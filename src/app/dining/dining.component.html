@@ -1,21 +1,88 @@
-<h1>dining works!</h1>
-<h1>dining works!</h1>
-<h1>dining works!</h1>
-<h1>dining works!</h1><h1>dining works!</h1><h1>dining works!</h1><h1>dining works!</h1><h1>dining works!</h1><h1>dining works!</h1><h1>dining works!</h1>v
-<h1>dining works!</h1><h1>dining works!</h1><h1>dining works!</h1>
-<h1>dining works!</h1>
-<h1>dining works!</h1><h1>dining works!</h1>
+<div class="container">
+<div class="row">
+  <div class="col">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>«Альфредо» 390 г</mat-card-title>
+        <mat-card-subtitle>370 ₽</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="https://www.delivery-club.ru/media/cms/relation_product/19838/300994392_m650.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          Вид пасты: пенне, спагетти или тальятелле на выбор. С курицей и брокколи в сливочном соусе
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="addBacket('Паста «Альфредо»', 370)">В корзину</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 
+    <div class="col">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Паста «Альфредо» 350 г</mat-card-title>
+          <mat-card-subtitle>370 ₽</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://www.delivery-club.ru/media/cms/relation_product/19838/300994392_m650.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            Вид пасты: пенне, спагетти или тальятелле на выбор. С курицей и брокколи в сливочном соусе
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="addBacket('Паста «Альфредо»', 370)">В корзину</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
 
+    <div class="col">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Паста «Болоньезе» 350 г</mat-card-title>
+          <mat-card-subtitle>370 ₽</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://www.delivery-club.ru/media/cms/relation_product/19838/306611312_m650.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            Вид пасты: пенне, спагетти или тальятелле на выбор. С мясным соусом и зеленью
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="addBacket('Паста «Болоньезе»', 370)">В корзину</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-
+    <div class="col">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Паста «Болоньезе» 410 г</mat-card-title>
+          <mat-card-subtitle>350 ₽</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://www.delivery-club.ru/media/cms/relation_product/19838/300994395_m650.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            Вид пасты: пенне, спагетти или тальятелле на выбор. С мясным соусом и зеленью
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="addBacket('Паста «Болоньезе»', 350)">В корзину</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  <hr>
+<p></p>
+  <div style="border: 1px solid #888888; border-radius: 13px;">
+    <div >
+    <h1>Корзина</h1>
+    <h2>Сумма {{count}}</h2>
+    <h3>Кол-во заказов {{backet.length}}</h3>
+    </div>
+  </div>
+</div>
