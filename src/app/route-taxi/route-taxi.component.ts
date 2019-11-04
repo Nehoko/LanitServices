@@ -101,7 +101,12 @@ export class RouteTaxiComponent implements OnInit {
   }
 
   createMarkers(place: any) {
+    let markerToClear = this.map.get(place.id);
+    if (markerToClear) {
+      markerToClear.setMap(null);
+    }
     this.map.delete(place.id)
+
     const latitude = parseFloat(place.lat);
     const longitude = parseFloat(place.lng);
     const busMarker = new google.maps.Marker({
