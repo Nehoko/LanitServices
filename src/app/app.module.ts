@@ -23,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from "@angular/material/card";
 import { SayRoomComponent } from './say-room/say-room.component';
 import { WindowModalComponent } from './window-modal/window-modal.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { WindowModalComponent } from './window-modal/window-modal.component';
     DriveFriendComponent,
     SayRoomComponent,
     WindowModalComponent,
+    PaymentComponent,
   ],
   imports: [
     Material.MatToolbarModule,
@@ -69,7 +71,7 @@ import { WindowModalComponent } from './window-modal/window-modal.component';
     AngularFireAuth,
     AuthService
   ],
-  entryComponents: [ WindowModalComponent],
+  entryComponents: [ WindowModalComponent, PaymentComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

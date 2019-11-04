@@ -3,6 +3,7 @@ import {PROP_DECORATORS} from "@angular/compiler-cli/ngcc/src/host/esm2015_host"
 import {Product} from "../dto/Product";
 import {MatDialog, MatDialogConfig} from "@angular/material";
 import {WindowModalComponent} from "../window-modal/window-modal.component";
+import {PaymentComponent} from "../payment/payment.component";
 
 @Component({
   selector: 'app-dining',
@@ -64,6 +65,22 @@ export class DiningComponent implements OnInit {
         this.backet = [];
       }
     });
+  }
+
+  payment() {
+    const dialogDownload = new MatDialogConfig();
+    dialogDownload.disableClose = true;
+    dialogDownload.autoFocus = true;
+    dialogDownload.height = "9,3%";
+    dialogDownload.width = "20%";
+    dialogDownload.closeOnNavigation = true;
+    dialogDownload.data  = {count: this.count};
+    const dialogRefDownload = this.dialog.open(PaymentComponent, dialogDownload);
+    /*dialogRefDownload.afterClosed().subscribe(data => {
+      if (data) {
+        this.backet = [];
+      }
+    });*/
   }
 }
 

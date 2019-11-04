@@ -89,25 +89,31 @@
   </div>
 
   <div style="margin-left: 68%">
-  <div class="row">
-    <div class="col-md-12" style="width: 98%; background-color: #F2F2F2">
-      <h1 style="float: left">Мой заказ</h1>
-      <button  style="margin-top: 3%; margin-left: 2%" mat-icon-button color="black" (click)="deleteAll()">
-        <mat-icon style ="font-size: 36px;">delete</mat-icon>
-      </button>
-      <div style="margin-top: 5%">
-        <p *ngIf="backet.length == 0">Выберите блюда и закажите</p>
+    <div class="row">
+      <div class="col-md-12" style="width: 98%; background-color: #F2F2F2; border-radius: 10px">
+        <h2 style="float: left; margin-top: 2%">Мой заказ</h2>
+        <button style="margin-top: 3%; margin-left: 2%" mat-icon-button color="black" (click)="deleteAll()">
+          <mat-icon style="font-size: 36px;">delete</mat-icon>
+        </button>
+        <div style="margin-top: 5%">
+          <p *ngIf="backet.length == 0">Выберите блюда и закажите</p>
 
-        <ul class="heroes">
-          <li *ngFor="let hero of backet">{{hero._name}} {{hero._price}} ₽               <button class="tab" mat-icon-button color="primary" (click)="deleteProduct(hero._id, hero._price)">
-            <mat-icon class="mat-10">clear</mat-icon>
-          </button></li>
-        </ul>
+          <ul class="heroes">
+            <li *ngFor="let hero of backet">{{hero._name}} {{hero._price}} ₽
+              <button class="tab" mat-icon-button color="primary" (click)="deleteProduct(hero._id, hero._price)">
+                <mat-icon class="mat-10">clear</mat-icon>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <hr>
+        <div style="margin-top: 10%">
+          <b><p style="font-size: 14pt">Итого: {{count}} ₽</p></b>
+        </div>
       </div>
-      <div style="margin-top: 10%">
-        <p>Итого: {{count}} ₽</p>
+      <div class="col-md-12">
+        <button (click)="payment()" style="margin-top: 5%; width: 100%; border-radius: 10px" mat-raised-button color="primary" >Оформить заказ</button>
       </div>
     </div>
-  </div>
   </div>
 </div>

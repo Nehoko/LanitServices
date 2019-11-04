@@ -1,0 +1,25 @@
+<p>Оплата заказа</p>
+
+<mat-icon>account_circle</mat-icon>
+<mat-form-field style="width: 90%; margin-left: 1%">
+  <input matInput placeholder="Логин" type="text" #userName ngModel name="userName" required>
+</mat-form-field>
+
+<mat-icon>credit_card</mat-icon>
+<mat-form-field style="width: 90%; margin-left: 1%">
+  <input matInput placeholder="Нормер карты" type="text" #userName ngModel name="userName" required>
+</mat-form-field>
+
+<mat-icon>date_range</mat-icon>
+<mat-form-field style="width: 90%; margin-left: 1%">
+  <input matInput placeholder="Дата" type="text" #userName ngModel name="userName" required>
+</mat-form-field>
+
+<mat-icon>credit_card</mat-icon>
+<mat-form-field style="width: 90%; margin-left: 1%">
+  <input matInput placeholder="CVV" type="text" #userName ngModel name="userName" required>
+</mat-form-field>
+
+<hr>
+<div align="center"><button (click)="payment()" mat-raised-button color="primary"> Оплатить {{count}} ₽</button>
+</div>))
