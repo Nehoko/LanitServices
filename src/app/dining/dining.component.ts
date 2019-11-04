@@ -63,6 +63,7 @@ export class DiningComponent implements OnInit {
     dialogRefDownload.afterClosed().subscribe(data => {
       if (data) {
         this.backet = [];
+        this.count = 0;
       }
     });
   }
