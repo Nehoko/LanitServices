@@ -2,7 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {AuthService} from "./services/auth.service";
 import {Router} from "@angular/router";
 import {CookieService} from "ngx-cookie-service";
-import * as firebase from 'firebase';
+import * as firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/firestore';
 
 const config = {
   apiKey: 'AIzaSyDlSvfm4hTW-y8Ogx7saOOUSpQBk0F4vX4',
