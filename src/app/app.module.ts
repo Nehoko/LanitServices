@@ -22,6 +22,7 @@ import {environment} from "../environments/environment.prod";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from "@angular/material/card";
 import { SayRoomComponent } from './say-room/say-room.component';
+import { WindowModalComponent } from './window-modal/window-modal.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { SayRoomComponent } from './say-room/say-room.component';
     RouteTaxiComponent,
     DriveFriendComponent,
     SayRoomComponent,
+    WindowModalComponent,
   ],
   imports: [
     Material.MatToolbarModule,
@@ -67,6 +69,7 @@ import { SayRoomComponent } from './say-room/say-room.component';
     AngularFireAuth,
     AuthService
   ],
+  entryComponents: [ WindowModalComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

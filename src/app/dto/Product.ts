@@ -1,6 +1,7 @@
 import {Injectable} from "@angular/core";
 
 export class Product {
+  id:Number;
   public price:number;
   public name:string;
 
@@ -20,5 +21,14 @@ export class Product {
 
   set _name(value: string) {
     this._name = value;
+  }
+
+
+  get _id(): Number {
+    return this.id;
+  }
+
+  set _id(value: Number) {
+    this.id = value;
   }
 }
