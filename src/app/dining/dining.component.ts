@@ -73,7 +73,7 @@ export class DiningComponent implements OnInit {
     dialogDownload.disableClose = true;
     dialogDownload.autoFocus = true;
     dialogDownload.height = "9,3%";
-    dialogDownload.width = "20%";
+    dialogDownload.width = "60%";
     dialogDownload.closeOnNavigation = true;
     dialogDownload.data  = {count: this.count};
     const dialogRefDownload = this.dialog.open(PaymentComponent, dialogDownload);
